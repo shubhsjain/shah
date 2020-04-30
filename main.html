@@ -8,13 +8,16 @@
       <!-- Compiled and minified CSS -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
        <script src="https://kit.fontawesome.com/022f3ede20.js" crossorigin="anonymous"></script>
+       <!--css style-->
+       <link rel="stylesheet" href="main.css">
 
       <!--Let browser know website is optimized for mobile-->
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>ShahTrips</title>
     </head>
 
-    <body>
+    <body id="home" class="scrollspy">
+        <!--navbar-->
         <div class="navbar-fixed">
             <nav class="blue">
                 <div class="container">
@@ -59,7 +62,87 @@
                <a href="#contact">Contact</a>
              </li>
            </ul>
-           
+
+            <!--section slider-->
+            <section class="slider">
+                <div class="slider">
+                    <ul class="slides">
+                      <li>
+                        <img src="img/resort1.jpg"> <!-- random image -->
+                        <div class="caption left-align">
+                          <h2>Take Your Dream Vacation</h2>
+                          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+                        </div>
+                      </li>
+                      <li>
+                        <img src="img/resort2.jpg"> <!-- random image -->
+                        <div class="caption right-align">
+                          <h2>We Work With All Budget</h2>
+                          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+                        </div>
+                      </li>
+                      <li>
+                        <img src="img/resort3.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                          <h2>Group & INdividual Gateways</h2>
+                          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+            </section>
+
+            <!--search section-->
+            <section id="search" class="section section-search blue darken-1 white-text center scrollspy">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h3>Search Destinations</h3>
+                            <div class="input-field">
+                                <input type=" text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Switzerland, HongKong ,Dubai, etc..." size="100px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section icon boxes-->
+            <section class="section section-icons grey lighten-4 center">
+                <div class="container">
+                    <div class="row">
+                      <div class="col s12 m4">
+                        <div class="card-panel">
+                            <i class="material-icons large blue-text">room</i>
+                            <h4>pick where</h4>
+                            <p>sdvfsjdhvfjdvnkajdbfsjhb</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                      <div class="card-panel">
+                          <i class="material-icons large blue-text">store</i>
+                          <h4>Travel Shop</h4>
+                          <p>sdvfsjdhvfjdvnkajdbfsjhb</p>
+                      </div>
+                  </div>
+                  <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large blue-text">airplanemode_active</i>
+                        <h4>Fly Cheap</h4>
+                        <p>sdvfsjdhvfjdvnkajdbfsjhb</p>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Popular section-->
+            <section id="Popular" class="section section-popular scrollspy">
+              
+            </section>
+
+
+
+
+
       <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -67,6 +150,52 @@
         //sidenav
         const sideNav = document.querySelector('.sidenav');
         M.Sidenav.init(sideNav, {});
+
+        //Slider
+        const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            height :500 ,
+            transition: 500,
+            interval: 6000
+        });
+        //autocomplete
+        const ac = document.querySelector('.autocomplete');
+        M.Autocomplete.init(ac, {
+            data:{
+                "Kerla": null,
+                "Canada": null,
+                "Dubai": null,
+                "HongKong": null,
+                "Myanmar": null,
+                "Laddak": null,
+                "Goa": null,
+                "Gujrat": null,
+                "Himachal Pradesh": null,
+                "Uttaranchal Pradesh": null,
+                "Sikkim": null,
+                "Northeast": null,
+                "Rajasthan": null,
+                "Karnataka": null,
+                "Kashmir": null,
+                "Andman": null,
+                "Maharashtra": null,
+                "Delhi": null,
+                "Madhya Pradesh": null,
+                "Hydrabad": null,
+                "West Bengal": null,
+                "Sri Lanka": null,
+                "Bhutan": null,
+                "Singapore": null,
+                "Malaysia": null,
+                "Maldives": null,
+                "Nepal": null,
+                "Thailand": null,
+                "Bali": null,
+                "Mauritious": null,
+            }
+        })
+
     </script>
     </body>
   </html>
